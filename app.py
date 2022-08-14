@@ -70,7 +70,9 @@ def scan_urls():
 def get_urls():
     return {"urls": [r.to_json() for r in RegisterModel.get_urls()]}, 200
 
+db.init_app(app)
+app.run()
 
-if __name__ == '__main__':
-    db.init_app(app)
-    app.run()
+# if __name__ == '__main__':
+#     db.init_app(app)
+#     app.run()
